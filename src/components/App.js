@@ -29,6 +29,7 @@ function App() {
   const [tooltipOpen, setTooltipOpen] = useState(false);
   const history = useHistory();
   useEffect(() => {
+    isLoggedIn &&
     Promise.all([apiConnect.getUserData(), apiConnect.getInitialCards()])
       .then(([userItem, initialCards]) => {
         setCurrentUser(userItem);

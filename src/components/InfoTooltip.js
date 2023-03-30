@@ -29,29 +29,11 @@ function InfoTooltip(props) {
           aria-label="Закрыть форму"
         />
         <div className="auth__info">
-          {props.status ? (
-            <>
-              <img
-                src={success}
-                className="auth__status-icon"
-                alt="Иконка успеха"
-              />
-              <p className="auth__status-text">
-                Вы успешно зарегистрировались!
-              </p>
-            </>
-          ) : (
-            <>
-              <img
-                src={error}
-                className="auth__status-icon"
-                alt="Иконка ошибки"
-              />
-              <p className="auth__status-text">
-                Что-то пошло не так! Попробуйте ещё раз.
-              </p>
-            </>
-          )}
+          <img
+            src={props.status ? success : error}
+            className="auth__status-icon"
+            alt={props.status ? "Иконка успеха" : "Иконка ошибки"}
+          />
         </div>
       </div>
     </div>
