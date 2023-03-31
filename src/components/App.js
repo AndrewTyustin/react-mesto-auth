@@ -38,7 +38,7 @@ function App() {
       .catch((err) => {
         console.log(`Возникла глобальная ошибка, ${err}`);
       });
-  }, []);
+  }, [history, isLoggedIn]);
   useEffect(() => {
     const userToken = localStorage.getItem("token");
     if (userToken) {

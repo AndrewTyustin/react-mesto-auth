@@ -34,6 +34,11 @@ function InfoTooltip(props) {
             className="auth__status-icon"
             alt={props.status ? "Иконка успеха" : "Иконка ошибки"}
           />
+          <p 
+            src={props.status ? success : error}
+            className="auth__status-text">
+            {props.status ? "Вы успешно зарегистрировались!" : "Что-то пошло не так! Попробуйте ещё раз."}
+          </p>
         </div>
       </div>
     </div>
